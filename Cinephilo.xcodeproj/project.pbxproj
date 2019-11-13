@@ -16,6 +16,10 @@
 		423D4A4C237496F7000EA3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423D4A4A237496F7000EA3F6 /* LaunchScreen.storyboard */; };
 		423D4A57237496F8000EA3F6 /* CinephiloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D4A56237496F8000EA3F6 /* CinephiloTests.swift */; };
 		423D4A62237496F8000EA3F6 /* CinephiloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423D4A61237496F8000EA3F6 /* CinephiloUITests.swift */; };
+		42AEF2CB237BA2EF00FE5937 /* loadFilmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AEF2CA237BA2EF00FE5937 /* loadFilmes.swift */; };
+		42BE55F3237B382800C854CA /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE55F2237B382800C854CA /* Filme.swift */; };
+		42BE55F7237B3F9400C854CA /* FilmeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE55F6237B3F9400C854CA /* FilmeCell.swift */; };
+		42BE55F9237B501000C854CA /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE55F8237B501000C854CA /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		423D4A5D237496F8000EA3F6 /* CinephiloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinephiloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423D4A61237496F8000EA3F6 /* CinephiloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinephiloUITests.swift; sourceTree = "<group>"; };
 		423D4A63237496F8000EA3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42AEF2CA237BA2EF00FE5937 /* loadFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadFilmes.swift; sourceTree = "<group>"; };
+		42BE55F2237B382800C854CA /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		42BE55F6237B3F9400C854CA /* FilmeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCell.swift; sourceTree = "<group>"; };
+		42BE55F8237B501000C854CA /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 				423D4A4A237496F7000EA3F6 /* LaunchScreen.storyboard */,
 				423D4A4D237496F7000EA3F6 /* Info.plist */,
 				423D4A45237496F6000EA3F6 /* Cinephilo.xcdatamodeld */,
+				42BE55F2237B382800C854CA /* Filme.swift */,
+				42BE55F6237B3F9400C854CA /* FilmeCell.swift */,
+				42BE55F8237B501000C854CA /* ViewController2.swift */,
+				42AEF2CA237BA2EF00FE5937 /* loadFilmes.swift */,
 			);
 			path = Cinephilo;
 			sourceTree = "<group>";
@@ -263,8 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				423D4A41237496F6000EA3F6 /* ViewController.swift in Sources */,
+				42BE55F9237B501000C854CA /* ViewController2.swift in Sources */,
 				423D4A47237496F6000EA3F6 /* Cinephilo.xcdatamodeld in Sources */,
+				42AEF2CB237BA2EF00FE5937 /* loadFilmes.swift in Sources */,
+				42BE55F3237B382800C854CA /* Filme.swift in Sources */,
 				423D4A3D237496F6000EA3F6 /* AppDelegate.swift in Sources */,
+				42BE55F7237B3F9400C854CA /* FilmeCell.swift in Sources */,
 				423D4A3F237496F6000EA3F6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
