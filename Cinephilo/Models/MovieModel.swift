@@ -16,5 +16,4 @@ struct MovieModel {
     let rated: Double!
     let year: Int!
     let genre: String!
-    
 }

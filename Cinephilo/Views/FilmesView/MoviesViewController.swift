@@ -23,25 +23,34 @@ class MoviesViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
 }
 
 extension MoviesViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.identifierMovieCell, for: indexPath) as! MoviesCollectionViewCell
         cell.configureSetMovie(with: filme[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         itemSelected = indexPath.row
         self.performSegue(withIdentifier: "showDetailsView", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let VCDestino = segue.destination as! DetailsViewController
-        VCDestino.imvMovie = filme[itemSelected].poster
         VCDestino.titulo.title = filme[itemSelected].title
-        VCDestino.sinopseMovie = filme[itemSelected].plotSummary
+        VCDestino.imvMovie = filme[itemSelected].poster
+        VCDestino.rateMovie = filme[itemSelected].rated
+        VCDestino.yearMovie = filme[itemSelected].year
+        VCDestino.titleMovie = filme[itemSelected].title
+        VCDestino.plotSummary = filme[itemSelected].plotSummary
     }
 }
 
@@ -49,21 +58,25 @@ extension MoviesViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return filme.count
     }
 }
 
 extension MoviesViewController: UICollectionViewDelegateFlowLayout {
-    private func collectionView(_ collectionView: UICollectionView, layout cell: UICollectionViewCell, forItemAt indexPath: IndexPath) -> CGSize {
+    private func collectionView(_ collectionView: UICollectionView,
+                                layout cell: UICollectionViewCell,
+                                forItemAt indexPath: IndexPath) -> CGSize {
         let screenWidht = self.view.frame.width
         let cellWidht = (screenWidht/2.0)
         return CGSize(width: cellWidht, height: cellWidht)
     }
     
-    private func collectionView(_ collectionView: UICollectionView, layout
-        collectionViewLayout: UICollectionViewCell, minimumLineSpacingForSectionAt
-        section: Int) -> CGFloat {
+    private func collectionView(_ collectionView: UICollectionView,
+                                layout collectionViewLayout: UICollectionViewCell,
+                                minimumLineSpacingForSectionAt
+section: Int) -> CGFloat {
         return 0.0
     }
     
@@ -73,7 +86,6 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
         return 0.0
     }
 }
-
 
 //extension UIView {
 //    func turnBlack() {

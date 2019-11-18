@@ -11,17 +11,30 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var titulo: UINavigationItem!
-    @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageFilmes: UIImageView!
+    @IBOutlet weak var labelRate: UILabel!
+    @IBOutlet weak var labelYear: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelSynopse: UILabel!
+    
+    @IBOutlet weak var buttonAddFavorite: UIButton!
     
     var imvMovie = UIImage()
-    var sinopseMovie = String()
+    var rateMovie = Double()
+    var yearMovie = Int()
+    var titleMovie = String()
+    var plotSummary = String()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.turnBlack()
         imageFilmes.image = imvMovie
-        labelTitle!.text = sinopseMovie
+        labelRate!.text = "Rate: \(rateMovie)"
+        labelYear!.text = "Year: \(yearMovie)"
+        labelTitle!.text = titleMovie
+        labelSynopse!.text = plotSummary
     }
+    
 }
 
