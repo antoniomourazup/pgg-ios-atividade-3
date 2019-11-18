@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  DetailsViewController.swift
 //  Cinephilo
 //
 //  Created by zupper on 12/11/19.
@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class DetailsViewController: UIViewController {
 
     @IBOutlet weak var titulo: UINavigationItem!
+    @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageFilmes: UIImageView!
-    var img = UIImage()
+    
+    var imvMovie = UIImage()
+    var sinopseMovie = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.turnBlack()
-        imageFilmes.image = img
+        //self.view.turnBlack()
+        imageFilmes.image = imvMovie
+        labelTitle!.text = sinopseMovie
     }
 }
 
